@@ -1,6 +1,6 @@
 package com.codgen.virtualcatalog.api.beans.user.impl;
 
-import com.codgen.virtualcatalog.api.beans.user.decl.UserCreator;
+import com.codgen.virtualcatalog.api.beans.user.decl.user.UserCreator;
 import com.codgen.virtualcatalog.domain.StoreUser;
 
 import javax.persistence.EntityManager;
