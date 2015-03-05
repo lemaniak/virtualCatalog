@@ -1,4 +1,4 @@
-package com.codgen.virtualcatalog.api.beans.user.decl.user;
+package com.codgen.virtualcatalog.api.beans.user.decl;
 
 import com.codgen.virtualcatalog.domain.StoreUser;
 

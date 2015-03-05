@@ -1,14 +1,18 @@
 package com.codgen.virtualcatalog.api.beans.user.impl;
 
-import com.codgen.virtualcatalog.api.beans.user.decl.user.UserDeleter;
+import com.codgen.virtualcatalog.api.beans.user.decl.UserDeleter;
 import com.codgen.virtualcatalog.domain.StoreUser;
 
+import javax.ejb.Stateless;
+import javax.inject.Named;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 /**
  * Created by vicente on 04/03/15.
  */
+@Named
+@Stateless
 public class UserDeleterImpl  implements UserDeleter{
     @PersistenceContext
     private EntityManager em;

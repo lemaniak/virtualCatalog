@@ -1,4 +1,4 @@
-package com.codgen.virtualcatalog.api.beans.user.decl.user;
+package com.codgen.virtualcatalog.api.beans.user.decl;
 
 import com.codgen.virtualcatalog.domain.StoreUser;
 
@@ -7,9 +7,9 @@ import com.codgen.virtualcatalog.domain.StoreUser;
  */
 public interface UserFinder {
 
-    StoreUser find(long id);
+    StoreUser find(Long id);
 
-    StoreUser get(long id);
+    StoreUser get(Long id);
 
     StoreUser findByEmail(String email);
 

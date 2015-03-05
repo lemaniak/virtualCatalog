@@ -21,6 +21,7 @@
         <setting name="provider-name" value="" />
         <datasource-mapping>
           <factory-entry name="petzila-api-pu" value="5595c6d4-a2ba-47f9-91fe-bca29dd381d9" />
+          <factory-entry name="virtual-catalog-api-pu" />
         </datasource-mapping>
         <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/main/resources/META-INF/persistence.xml" />
       </configuration>
