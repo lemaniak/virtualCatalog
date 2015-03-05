@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - virtualCatalog@localhost" uuid="5595c6d4-a2ba-47f9-91fe-bca29dd381d9">
+    <database-info product="MySQL" version="5.5.41-0ubuntu0.14.04.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.34 ( Revision: jess.balint@oracle.com-20141014163213-wqbwpf1ok2kvo1om )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
+    <schema name="" catalog="virtualCatalog"/>
+    <table name="carousel" schema="" catalog="virtualCatalog" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="store" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="image" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="fk_carousel_store1" columns="store" ref-table="store" ref-schema="" ref-catalog="virtualCatalog" ref-columns="id" update-rule="0" delete-rule="0" deferrability="2"/>
+      <foreign-key name="fk_carousel_images1" columns="image" ref-table="image" ref-schema="" ref-catalog="virtualCatalog" ref-columns="id" update-rule="0" delete-rule="0" deferrability="2"/>
+      <index name="fk_carousel_images1_idx" unique="false" columns="image"/>
+      <index name="fk_carousel_store1_idx" unique="false" columns="store"/>
+    </table>
+    <table name="image" schema="" catalog="virtualCatalog" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="url" sqlType="VARCHAR" precision="500" scale="0" nullable="false" jdbcType="12"/>
+      <column name="createdAt" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="fk_carousel_images1" table="carousel" schema="" catalog="virtualCatalog" columns="image"/>
+      <exported-key name="fk_store_images1" table="store" schema="" catalog="virtualCatalog" columns="logo"/>
+      <exported-key name="fk_administrator_images" table="storeUser" schema="" catalog="virtualCatalog" columns="image"/>
+    </table>
+    <table name="store" schema="" catalog="virtualCatalog" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="200" scale="0" nullable="false" jdbcType="12"/>
+      <column name="email" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12"/>
+      <column name="phone" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="facebook" sqlType="VARCHAR" precision="500" scale="0" nullable="true" jdbcType="12"/>
+      <column name="twitter" sqlType="VARCHAR" precision="500" scale="0" nullable="true" jdbcType="12"/>
+      <column name="youtube" sqlType="VARCHAR" precision="500" scale="0" nullable="true" jdbcType="12"/>
+      <column name="pinterest" sqlType="VARCHAR" precision="500" scale="0" nullable="true" jdbcType="12"/>
+      <column name="logo" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="fk_store_images1" columns="logo" ref-table="image" ref-schema="" ref-catalog="virtualCatalog" ref-columns="id" update-rule="0" delete-rule="2" deferrability="2"/>
+      <exported-key name="fk_carousel_store1" table="carousel" schema="" catalog="virtualCatalog" columns="store"/>
+      <index name="fk_store_images1_idx" unique="false" columns="logo"/>
+    </table>
+    <table name="storeUser" schema="" catalog="virtualCatalog" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="lastName" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="email" sqlType="VARCHAR" precision="200" scale="0" nullable="false" jdbcType="12"/>
+      <column name="createdAt" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <column name="lastLogin" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="password" sqlType="VARCHAR" precision="500" scale="0" nullable="false" jdbcType="12"/>
+      <column name="sexType" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="activationKey" sqlType="VARCHAR" precision="500" scale="0" nullable="true" jdbcType="12"/>
+      <column name="active" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="role" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="image" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="fk_administrator_images" columns="image" ref-table="image" ref-schema="" ref-catalog="virtualCatalog" ref-columns="id" update-rule="0" delete-rule="2" deferrability="2"/>
+      <index name="fk_administrator_images_idx" unique="false" columns="image"/>
+    </table>
+  </data-source>
+</component>

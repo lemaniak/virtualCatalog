@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.jboss.arquillian.extension:arquillian-rest-client-impl-base:1.0.0.Final-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/jboss/arquillian/extension/arquillian-rest-client-impl-base/1.0.0.Final-SNAPSHOT/arquillian-rest-client-impl-base-1.0.0.Final-20140701.133729-1057.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/jboss/arquillian/extension/arquillian-rest-client-impl-base/1.0.0.Final-SNAPSHOT/arquillian-rest-client-impl-base-1.0.0.Final-20140701.133729-1057-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/jboss/arquillian/extension/arquillian-rest-client-impl-base/1.0.0.Final-SNAPSHOT/arquillian-rest-client-impl-base-1.0.0.Final-20140701.133729-1057-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
