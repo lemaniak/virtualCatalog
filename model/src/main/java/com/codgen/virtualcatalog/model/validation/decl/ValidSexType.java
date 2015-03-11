@@ -15,8 +15,8 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 @Retention(RUNTIME)
 @Constraint(validatedBy = ValidSexTypeValidator.class)
 @Documented
-public @interface ValidSextype {
-    String message() default "{com.petzila.api.validation.constraints.SignupTypeInvalid.message}";
+public @interface ValidSexType {
+    String message() default "{user.sextype.invalid}";
 
     Class<?>[] groups() default {};
 
@@ -26,6 +26,6 @@ public @interface ValidSextype {
     @Retention(RUNTIME)
     @Documented
     @interface List {
-        ValidSextype[] value();
+        ValidSexType[] value();
     }
 }

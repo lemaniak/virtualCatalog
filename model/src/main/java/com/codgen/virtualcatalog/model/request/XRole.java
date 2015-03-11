@@ -13,7 +13,7 @@ public enum XRole {
 
     @XmlEnumValue("local")
     ADMIN("admin"),
-    @XmlEnumValue("facebook")
+    @XmlEnumValue("user")
     USER("user");
     private final String value;
 

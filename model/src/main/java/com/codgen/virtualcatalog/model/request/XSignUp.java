@@ -2,7 +2,7 @@ package com.codgen.virtualcatalog.model.request;
 
 import com.codgen.virtualcatalog.model.validation.decl.ValidEmail;
 import com.codgen.virtualcatalog.model.validation.decl.ValidRoleType;
-import com.codgen.virtualcatalog.model.validation.decl.ValidSextype;
+import com.codgen.virtualcatalog.model.validation.decl.ValidSexType;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -24,12 +24,16 @@ public class XSignUp {
     @NotNull(message="{user.password.required}")
     @Size(min = 8, max = 50, message="{user.password.invalid.size}")
     private String password;
-    @ValidSextype
-    private XSexType sexType;
+    @ValidSexType
+    private String sexType;
     @ValidRoleType
-    private XRole role;
+    private String role;
 
-    public XSignUp(String name, String email, String password, XSexType sexType, XRole role) {
+    public XSignUp() {
+    }
+
+
+    public XSignUp(String name, String email, String password, String sexType, String role) {
         this.name = name;
         this.email = email;
         this.password = password;
@@ -61,19 +65,19 @@ public class XSignUp {
         this.password = password;
     }
 
-    public XSexType getSexType() {
+    public String getSexType() {
         return sexType;
     }
 
-    public void setSexType(XSexType sexType) {
+    public void setSexType(String sexType) {
         this.sexType = sexType;
     }
 
-    public XRole getRole() {
+    public String getRole() {
         return role;
     }
 
-    public void setRole(XRole role) {
+    public void setRole(String role) {
         this.role = role;
     }
 }

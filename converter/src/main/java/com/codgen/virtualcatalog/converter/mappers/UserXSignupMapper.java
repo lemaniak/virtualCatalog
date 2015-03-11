@@ -2,6 +2,7 @@ package com.codgen.virtualcatalog.converter.mappers;
 
 import com.codgen.virtualcatalog.converter.producer.DozerMapperProducer;
 import com.codgen.virtualcatalog.domain.StoreUser;
+import com.codgen.virtualcatalog.model.request.XSignUp;
 import com.codgen.virtualcatalog.model.response.XSignupResponse;
 
 
@@ -20,5 +21,10 @@ public class UserXSignupMapper {
         XSignupResponse signUpResponse= mapper.get().map(storeUser, XSignupResponse.class);
 
         return signUpResponse;
+    }
+
+    public StoreUser convertTo(XSignUp signUp) {
+        StoreUser storeUser= mapper.get().map(signUp, StoreUser.class);
+        return storeUser;
     }
 }

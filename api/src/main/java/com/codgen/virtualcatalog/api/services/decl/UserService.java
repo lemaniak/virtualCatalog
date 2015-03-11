@@ -9,7 +9,7 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
-import javax.xml.ws.Response;
+import javax.ws.rs.core.Response;
 
 /**
  * Created by vicente on 10/03/15.
@@ -21,5 +21,5 @@ public interface UserService {
     @Path("/signup")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    Response signup(@NotNull(message="{com.petzila.api.validation.constraints.EmptyRequest.message}") @Valid XSignUp signUp);
+    Response signup(@NotNull(message="{virtual.catalog.validation.empty.request}") @Valid XSignUp signUp);
 }

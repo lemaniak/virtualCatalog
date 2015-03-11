@@ -9,6 +9,9 @@
         <!--<mapping-file>META-INF/queries/indie-user-finder-queries.xml</mapping-file>-->
 
         <class>com.codgen.virtualcatalog.domain.StoreUser</class>
+        <class>com.codgen.virtualcatalog.domain.Image</class>
+        <class>com.codgen.virtualcatalog.domain.Carousel</class>
+        <class>com.codgen.virtualcatalog.domain.Store</class>
         <!--<class>com.petzila.domain.IndieUser</class>-->
 
         <properties>
