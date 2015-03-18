@@ -9,12 +9,24 @@
         <date-format>MM/dd/yyyy HH:mm</date-format>
         <wildcard>true</wildcard>
         <relationship-type>non-cumulative</relationship-type>
+        <custom-converters>
+            <converter type="com.codgen.virtualcatalog.converter.mappers.RoleTypeConverter" >
+                <class-a>com.codgen.virtualcatalog.domain.Role</class-a>
+                <class-b>java.lang.String</class-b>
+            </converter>
+            <converter type="com.codgen.virtualcatalog.converter.mappers.SexTypeConverter" >
+                <class-a>com.codgen.virtualcatalog.domain.SexType</class-a>
+                <class-b>java.lang.String</class-b>
+            </converter>
+        </custom-converters>
     </configuration>
 
     <!--User-->
     <mapping map-empty-string="false" map-null="true">
-        <class-a>com.codgen.virtualcatalog.domain.StoreUser</class-a>
-        <class-b>com.codgen.virtualcatalog.model.response.XSignupResponse</class-b>
+        <class-a>com.codgen.virtualcatalog.model.response.XSignupResponse</class-a>
+        <class-b>com.codgen.virtualcatalog.domain.StoreUser</class-b>
     </mapping>
+
+
 
 </mappings>

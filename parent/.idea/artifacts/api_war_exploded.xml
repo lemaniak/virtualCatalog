@@ -45,6 +45,9 @@
           <element id="library" level="project" name="Maven: org.apache.httpcomponents:httpcore:4.2.1" />
           <element id="library" level="project" name="Maven: com.googlecode.json-simple:json-simple:1.1.1" />
           <element id="library" level="project" name="Maven: org.mockito:mockito-all:2.0.2-beta" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.4.3" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.4.0" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.4.3" />
         </element>
       </element>
       <element id="directory" name="META-INF">

@@ -4,8 +4,8 @@ package com.codgen.virtualcatalog.domain;
  * Created by vicente on 07/12/14.
  */
 public enum SexType {
-    MALE ("Male"),
-    FEMALE ("Female");
+    MALE ("male"),
+    FEMALE ("female");
 
     private SexType(String value) {
         this.value = value;
@@ -21,4 +21,12 @@ public enum SexType {
         this.value = value;
     }
 
+    public static SexType fromValue(String v) {
+        for (SexType st : SexType.values()) {
+            if (st.value.equals(v)) {
+                return st;
+            }
+        }
+        throw new IllegalArgumentException(v);
+    }
 }

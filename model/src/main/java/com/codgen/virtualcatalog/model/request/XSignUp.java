@@ -28,17 +28,20 @@ public class XSignUp {
     private String sexType;
     @ValidRoleType
     private String role;
+    @NotNull(message="{user.lastname.required}")
+    @Size(min = 4, max = 100, message="{user.lastname.invalid.size}")
+    private String lastName;
 
     public XSignUp() {
     }
 
-
-    public XSignUp(String name, String email, String password, String sexType, String role) {
+    public XSignUp(String name, String email, String password, String sexType, String role, String lastName) {
         this.name = name;
         this.email = email;
         this.password = password;
         this.sexType = sexType;
         this.role = role;
+        this.lastName = lastName;
     }
 
     public String getName() {
@@ -47,6 +50,14 @@ public class XSignUp {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getEmail() {

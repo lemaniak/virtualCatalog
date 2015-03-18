@@ -4,8 +4,8 @@ package com.codgen.virtualcatalog.domain;
  * Created by vicente on 09/12/14.
  */
 public enum Role {
-    ADMIN ("Admin"),
-    USER ("User");
+    ADMIN ("admin"),
+    USER ("user");
 
     private Role(String value) {
         this.value = value;
@@ -19,5 +19,14 @@ public enum Role {
 
     public void setValue(String value) {
         this.value = value;
+    }
+
+    public static Role fromValue(String v) {
+        for (Role c : Role.values()) {
+            if (c.value.equals(v)) {
+                return c;
+            }
+        }
+        throw new IllegalArgumentException(v);
     }
 }
