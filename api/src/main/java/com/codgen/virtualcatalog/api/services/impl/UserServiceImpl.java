@@ -6,6 +6,7 @@ import com.codgen.virtualcatalog.converter.mappers.UserXSignupMapper;
 import com.codgen.virtualcatalog.domain.StoreUser;
 import com.codgen.virtualcatalog.model.request.XSignUp;
 
+import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -15,6 +16,7 @@ import java.util.Date;
 /**
  * Created by vicente on 10/03/15.
  */
+@Stateless
 public class UserServiceImpl implements UserService {
 
     @Inject
