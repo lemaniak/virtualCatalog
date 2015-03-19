@@ -2,6 +2,8 @@ package com.codgen.virtualcatalog.api.beans.user.impl;
 
 import com.codgen.virtualcatalog.api.beans.user.decl.UserDeleter;
 import com.codgen.virtualcatalog.domain.StoreUser;
+import com.codgen.virtualcatalog.exceptions.ServiceException;
+import com.codgen.virtualcatalog.exceptions.ValidationException;
 
 import javax.ejb.Stateless;
 import javax.inject.Named;
@@ -30,9 +32,14 @@ public class UserDeleterImpl  implements UserDeleter{
     @Override
     public void deleteById(Long id) {
         if (id == null) {
-            throw new IllegalArgumentException("Id is required");
+            throw new ValidationException("Id is required");
         } else {
-            em.createNamedQuery("User.deletebyid").setParameter(1,id).executeUpdate();
+            try{
+                em.createNamedQuery("User.deletebyid").setParameter(1,id).executeUpdate();
+            }catch(IllegalArgumentException iae){
+                throw new ServiceException("error deleting entity");
+            }
+
         }
     }
 }

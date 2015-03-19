@@ -3,6 +3,7 @@ package com.codgen.virtualcatalog.api.beans.user.impl;
 import com.codgen.virtualcatalog.api.beans.user.decl.UserCreator;
 import com.codgen.virtualcatalog.domain.StoreUser;
 import com.codgen.virtualcatalog.exceptions.ServiceException;
+import com.codgen.virtualcatalog.exceptions.ValidationException;
 
 import javax.ejb.Stateless;
 import javax.inject.Named;
@@ -23,7 +24,7 @@ public class UserCreatorImpl implements UserCreator {
     @Override
     public StoreUser create(StoreUser storeUser) {
         if(storeUser == null){
-            throw new ServiceException("Entity is required");
+            throw new ValidationException("Entity is required");
         }else{
             try{
                 em.persist(storeUser);

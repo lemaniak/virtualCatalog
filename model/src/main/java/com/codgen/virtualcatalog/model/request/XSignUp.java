@@ -17,6 +17,9 @@ public class XSignUp {
     @NotNull(message="{user.name.required}")
     @Size(min = 2, max = 100, message="{user.name.invalid.size}")
     private String name;
+    @NotNull(message="{user.lastname.required}")
+    @Size(min = 4, max = 100, message="{user.lastname.invalid.size}")
+    private String lastName;
     @NotNull(message="{user.email.required}")
     @Size(min = 10, max = 200, message="{user.email.invalid.size}")
     @ValidEmail
@@ -28,9 +31,7 @@ public class XSignUp {
     private String sexType;
     @ValidRoleType
     private String role;
-    @NotNull(message="{user.lastname.required}")
-    @Size(min = 4, max = 100, message="{user.lastname.invalid.size}")
-    private String lastName;
+
 
     public XSignUp() {
     }

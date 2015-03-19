@@ -1,6 +1,7 @@
 package com.codgen.virtualcatalog.api.services.impl;
 
 import com.codgen.virtualcatalog.api.beans.user.decl.UserCreator;
+import com.codgen.virtualcatalog.api.beans.user.decl.UserDeleter;
 import com.codgen.virtualcatalog.api.services.decl.UserService;
 import com.codgen.virtualcatalog.converter.mappers.UserXSignupMapper;
 import com.codgen.virtualcatalog.domain.StoreUser;
@@ -22,6 +23,8 @@ public class UserServiceImpl implements UserService {
     @Inject
     private UserCreator userCreator;
     @Inject
+    private UserDeleter userDeleter;
+    @Inject
     private UserXSignupMapper userXSignupMapper;
 
 
@@ -34,4 +37,11 @@ public class UserServiceImpl implements UserService {
                 .entity(userXSignupMapper.convertFrom(storeUser))
                 .build();
     }
+
+    @Override
+    public Response delete(Long id) {
+        return null;
+    }
+
+
 }
