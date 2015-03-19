@@ -9,7 +9,7 @@
         <relativePath>../parent/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>converter</artifactId>
+    <artifactId>exceptions</artifactId>
     <packaging>jar</packaging>
 
     <developers>
@@ -26,38 +26,12 @@
         </developer>
     </developers>
 
-
     <dependencies>
         <!--Java EE-->
         <dependency>
             <groupId>javax</groupId>
             <artifactId>javaee-api</artifactId>
         </dependency>
-        <!--DOZER-->
-        <dependency>
-            <groupId>net.sf.dozer</groupId>
-            <artifactId>dozer</artifactId>
-        </dependency>
-        <!--DOMAIN-->
-        <dependency>
-            <groupId>com.codgen.virtualcatalog</groupId>
-            <artifactId>domain</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <!--MODEL-->
-        <dependency>
-            <groupId>com.codgen.virtualcatalog</groupId>
-            <artifactId>model</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.codgen.virtualcatalog</groupId>
-            <artifactId>exceptions</artifactId>
-            <version>${project.version}</version>
-            <scope>compile</scope>
-        </dependency>
     </dependencies>
-
 
 </project>

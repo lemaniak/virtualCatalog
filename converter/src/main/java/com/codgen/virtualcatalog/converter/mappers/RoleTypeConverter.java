@@ -1,12 +1,15 @@
 package com.codgen.virtualcatalog.converter.mappers;
 
 import com.codgen.virtualcatalog.domain.Role;
+import com.codgen.virtualcatalog.exceptions.ServiceException;
 import org.dozer.CustomConverter;
-import org.dozer.MappingException;
+
+import javax.ejb.Stateless;
 
 /**
  * Created by vicente on 17/03/15.
  */
+@Stateless
 public class RoleTypeConverter implements CustomConverter {
 
     @Override
@@ -22,9 +25,7 @@ public class RoleTypeConverter implements CustomConverter {
                 return ((Role) source).getValue();
             }
         }catch(Exception ex){
-            throw new MappingException("Converter RoleTypeConverter "
-                    + "used incorrectly. Arguments passed in were:"
-                    + destination + " and " + source);
+            throw new ServiceException("bussiness exception error mapping objects");
         }
         return null;
     }

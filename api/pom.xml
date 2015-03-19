@@ -132,6 +132,13 @@
             <scope>compile</scope>
         </dependency>
 
+        <dependency>
+            <groupId>com.codgen.virtualcatalog</groupId>
+            <artifactId>exceptions</artifactId>
+            <version>${project.version}</version>
+            <scope>compile</scope>
+        </dependency>
+
         <!--third party libraries-->
         <dependency>
             <groupId>com.cloudinary</groupId>

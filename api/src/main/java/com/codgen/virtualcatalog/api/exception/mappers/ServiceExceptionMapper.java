@@ -1,6 +1,7 @@
 package com.codgen.virtualcatalog.api.exception.mappers;
 
-import com.codgen.virtualcatalog.api.exception.ServiceException;
+
+import com.codgen.virtualcatalog.exceptions.ServiceException;
 
 import javax.ws.rs.core.Response;
 import javax.ws.rs.ext.ExceptionMapper;

@@ -1,4 +1,4 @@
-package com.codgen.virtualcatalog.api.exception;
+package com.codgen.virtualcatalog.exceptions;
 
 
 

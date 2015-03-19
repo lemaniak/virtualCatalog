@@ -2,11 +2,13 @@ package com.codgen.virtualcatalog.api.beans.user.impl;
 
 import com.codgen.virtualcatalog.api.beans.user.decl.UserCreator;
 import com.codgen.virtualcatalog.domain.StoreUser;
+import com.codgen.virtualcatalog.exceptions.ServiceException;
 
 import javax.ejb.Stateless;
 import javax.inject.Named;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.PersistenceException;
 
 /**
  * Created by vicente on 04/03/15.
@@ -21,11 +23,15 @@ public class UserCreatorImpl implements UserCreator {
     @Override
     public StoreUser create(StoreUser storeUser) {
         if(storeUser == null){
-            throw new IllegalArgumentException("Entity is required");
+            throw new ServiceException("Entity is required");
         }else{
-            em.persist(storeUser);
-            em.flush();
-            return storeUser;
+            try{
+                em.persist(storeUser);
+                em.flush();
+                return storeUser;
+            }catch(PersistenceException pex){
+                throw new ServiceException("Server error saving entity");
+            }
         }
     }
 }

@@ -26,6 +26,7 @@
     <modules>
         <module>../domain</module>
         <module>../model</module>
+        <module>../exception</module>
         <module>../converter</module>
         <module>../api</module>
     </modules>

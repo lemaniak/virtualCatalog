@@ -38,6 +38,9 @@
             <element id="module-output" name="model" />
           </element>
           <element id="library" level="project" name="Maven: com.google.guava:guava:18.0" />
+          <element id="archive" name="exceptions-1.0.0.jar">
+            <element id="module-output" name="exception" />
+          </element>
           <element id="library" level="project" name="Maven: com.cloudinary:cloudinary:1.0.14" />
           <element id="library" level="project" name="Maven: commons-codec:commons-codec:1.6" />
           <element id="library" level="project" name="Maven: commons-collections:commons-collections:3.2.1" />

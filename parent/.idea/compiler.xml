@@ -25,6 +25,7 @@
         <module name="api" />
         <module name="converter" />
         <module name="domain" />
+        <module name="exception" />
         <module name="model" />
       </profile>
     </annotationProcessing>
